@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<div class="header">
+<h1>Cocktails</h1>
+</div>
+
+
+
+  <tbody>
+    <div class="container">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-12 col-sm-4 col-lg-3">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+                <div class="card-category"><%=link_to 'Show', cocktail%></div>
+                <div class="card-description">
+                  <h2><%= cocktail.name%> </h2>
+                </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+<br>
+
+<%= link_to 'New Cocktail', new_cocktail_path %>
+
